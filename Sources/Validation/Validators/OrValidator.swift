@@ -43,12 +43,12 @@ fileprivate struct OrValidator<T>: ValidatorType {
 }
 
 /// Error thrown if or validation fails
-fileprivate struct OrValidatorError: ValidationError {
+public struct OrValidatorError: ValidationError {
     /// error thrown by left validator
-    let left: ValidationError
+    public let left: ValidationError
 
     /// error thrown by right validator
-    let right: ValidationError
+    public let right: ValidationError
 
     /// See ValidationError.reason
     var reason: String {

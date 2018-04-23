@@ -48,12 +48,12 @@ fileprivate struct AndValidator<T>: ValidatorType {
 }
 
 /// Error thrown if and validation fails
-fileprivate struct AndValidatorError: ValidationError {
+public struct AndValidatorError: ValidationError {
     /// error thrown by left validator
-    let left: ValidationError?
+    public let left: ValidationError?
 
     /// error thrown by right validator
-    let right: ValidationError?
+    public let right: ValidationError?
 
     /// See ValidationError.reason
     var reason: String {
