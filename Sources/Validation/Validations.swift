@@ -114,9 +114,9 @@ extension Validations where M: Reflectable {
 // MARK: Private
 
 /// A collection of errors thrown by validatable models validations
-fileprivate struct ValidateErrors: ValidationError {
+public struct ValidateErrors: ValidationError {
     /// the errors thrown
-    var errors: [ValidationError]
+    public var errors: [ValidationError]
 
     /// See ValidationError.keyPath
     var path: [String]
