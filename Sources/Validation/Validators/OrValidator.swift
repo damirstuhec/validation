@@ -51,7 +51,7 @@ public struct OrValidatorError: ValidationError {
     public let right: ValidationError
 
     /// See ValidationError.reason
-    var reason: String {
+    public var reason: String {
         var left = self.left
         left.path = self.path + self.left.path
         var right = self.right
@@ -60,7 +60,7 @@ public struct OrValidatorError: ValidationError {
     }
 
     /// See ValidationError.keyPath
-    var path: [String]
+    public var path: [String]
 
     /// Creates a new or validator error
     init(_ left: ValidationError, _ right: ValidationError) {

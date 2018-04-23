@@ -56,7 +56,7 @@ public struct AndValidatorError: ValidationError {
     public let right: ValidationError?
 
     /// See ValidationError.reason
-    var reason: String {
+    public var reason: String {
         if let left = left, let right = right {
             var mutableLeft = left, mutableRight = right
             mutableLeft.path = path + left.path
@@ -76,7 +76,7 @@ public struct AndValidatorError: ValidationError {
     }
 
     /// See ValidationError.keyPath
-    var path: [String]
+    public var path: [String]
 
     /// Creates a new or validator error
     init(_ left: ValidationError?, _ right: ValidationError?) {

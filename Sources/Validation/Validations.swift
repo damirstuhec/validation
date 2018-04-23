@@ -119,10 +119,10 @@ public struct ValidateErrors: ValidationError {
     public var errors: [ValidationError]
 
     /// See ValidationError.keyPath
-    var path: [String]
+    public var path: [String]
 
     /// See ValidationError.reason
-    var reason: String {
+    public var reason: String {
         return errors.map { error in
             var mutableError = error
             mutableError.path = path + error.path
